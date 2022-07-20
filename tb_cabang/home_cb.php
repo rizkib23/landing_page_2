@@ -32,7 +32,6 @@
                       ?>
                         <select required name="id_perusahaan" class="form-control">
                           <?php while($row1=mysqli_fetch_array($query)){?>
-                          <option></option>
                           <option value= "<?php echo $row1['id_perusahaan']?>"><?php echo $row1['id_perusahaan'].$a.$row1['nama_pusat'].$b;?></option>
                           <?php }   ?>
                         </select>

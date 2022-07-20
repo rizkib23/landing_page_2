@@ -48,7 +48,8 @@
               DATA BARANG
             </div>
             <div class="card-body">
-              <table class="table table-bordered" id="myTable">
+            <a href="home_brg.php" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
+              <table class="table table-bordered " id="myTable">
                 <thead>
                   <tr>
                     <th scope="col">id</th>
@@ -92,7 +93,6 @@
                 <?php } ?>
                 </tbody>
               </table>
-              <a href="home_brg.php" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
             </div>
           </div>
       </div>

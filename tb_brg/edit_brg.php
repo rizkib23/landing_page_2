@@ -45,7 +45,6 @@
                     ?>
                       <select required name="id_kategori" class="form-control">
                         <?php while($row1=mysqli_fetch_array($query)){?>
-                        <option></option>
                         <option value= "<?php echo $row1['id_kategori']?>"><?php echo $row1['id_kategori'].$a.$row1['nama_ktgr'].$b;?></option>
                         <?php }   ?>
                       </select>
@@ -63,7 +62,6 @@
                           $b=" ) ";?>
                       <select required name="id_supplier" class="form-control">
                         <?php while($row1=mysqli_fetch_array($query)){?>
-                          <option></option>
                         <option  value= "<?php echo $row1['id_supplier']?>"><?php echo $row1['id_supplier'].$a.$row1['nama_supplier'].$b;?></option>
                         <?php }   ?>
                       </select>
@@ -71,7 +69,7 @@
 
                 <div class="form-group">
                   <label>Nama</label>
-                  <input type="text" name="nama" value="<?php echo $row['nama'] ?>"  class="form-control">
+                  <input required type="text" name="nama" value="<?php echo $row['nama'] ?>"  class="form-control">
                   <input type="hidden" name="id_barang" value="<?php echo $row['id_barang'] ?>">
                 </div>
 

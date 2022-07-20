@@ -32,7 +32,6 @@
                     ?>
                       <select name="id_kategori" class="form-control">
                         <?php while($row=mysqli_fetch_array($query)){?>
-                          <option></option>
                         <option value= "<?php echo $row['id_kategori']?>"><?php echo $row['id_kategori'].$a.$row['nama_ktgr'].$b;?></option>
                         <?php }   ?>
                       </select>
@@ -49,7 +48,6 @@
                           $b=" ) ";?>
                       <select name="id_supplier" class="form-control">
                         <?php while($row=mysqli_fetch_array($query)){?>
-                          <option></option>
                         <option value= "<?php echo $row['id_supplier']?>"><?php echo $row['id_supplier'].$a.$row['nama_supplier'].$b;?></option>
                         <?php }   ?>
                       </select>

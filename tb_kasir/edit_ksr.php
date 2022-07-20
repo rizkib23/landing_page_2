@@ -45,7 +45,6 @@
                     ?>
                       <select required name="id_cabang" class="form-control">
                         <?php while($row1=mysqli_fetch_array($query)){?>
-                        <option></option>
                         <option value= "<?php echo $row1['id_cabang']?>"><?php echo $row1['id_cabang'].$a.$row1['nama_cb'].$b;?></option>
                         <?php }   ?>
                       </select>

@@ -32,7 +32,6 @@
                     ?>
                       <select name="id_cabang" class="form-control">
                         <?php while($row=mysqli_fetch_array($query)){?>
-                          <option></option>
                         <option value= "<?php echo $row['id_cabang']?>"><?php echo $row['id_cabang'].$a.$row['nama_cb'].$b;?></option>
                         <?php }   ?>
                       </select>

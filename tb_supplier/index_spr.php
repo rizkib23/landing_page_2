@@ -45,6 +45,7 @@
               DATA SUPPLIER
             </div>
             <div class="card-body">
+            <a href="home_spr.php" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
               <table class="table table-bordered" id="myTable">
                 <thead>
                   <tr>
@@ -78,7 +79,6 @@
                 <?php } ?>
                 </tbody>
               </table>
-              <a href="home_spr.php" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
             </div>
           </div>
       </div>
