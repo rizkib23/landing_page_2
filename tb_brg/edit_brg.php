@@ -27,11 +27,47 @@
       <div class="row">
         <div class="col-md-8 offset-md-2">
           <div class="card">
-            <div class="card-header">
+            <div class="card-header text-center">
               EDIT BARANG
             </div>
             <div class="card-body">
               <form action="update_brg.php" method="POST">
+
+              <div class="form-group">
+                  <label>id Kategori</label>
+                    <?php
+                      include '../konek.php';
+                     
+                      $sql= "SELECT * FROM tb_kategori";
+                      $query=mysqli_query($connection,$sql); 
+                      $a=" ( ";
+                      $b=" ) ";
+                    ?>
+                      <select required name="id_kategori" class="form-control">
+                        <?php while($row1=mysqli_fetch_array($query)){?>
+                        <option></option>
+                        <option value= "<?php echo $row1['id_kategori']?>"><?php echo $row1['id_kategori'].$a.$row1['nama_ktgr'].$b;?></option>
+                        <?php }   ?>
+                      </select>
+              </div>
+
+
+                  <div class="form-group">
+                    <label>id Supplier</label>
+                    <?php
+                          include '../konek.php';
+                        
+                          $sql= "SELECT * FROM tb_supplier";
+                          $query=mysqli_query($connection,$sql); 
+                          $a=" ( ";
+                          $b=" ) ";?>
+                      <select required name="id_supplier" class="form-control">
+                        <?php while($row1=mysqli_fetch_array($query)){?>
+                          <option></option>
+                        <option  value= "<?php echo $row1['id_supplier']?>"><?php echo $row1['id_supplier'].$a.$row1['nama_supplier'].$b;?></option>
+                        <?php }   ?>
+                      </select>
+                  </div>
 
                 <div class="form-group">
                   <label>Nama</label>
@@ -41,25 +77,23 @@
 
                 <div class="form-group">
                   <label>Stok</label>
-                  <input type="int" name="stok" value="<?php echo $row['stok'] ?>" class="form-control">
+                  <input required type="int" name="stok" value="<?php echo $row['stok'] ?>" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label>Harga modal</label>
-                  <input type="int" name="harga_modal" value="<?php echo $row['harga_modal'] ?>" class="form-control">
+                  <input required type="int" name="harga_modal" value="<?php echo $row['harga_modal'] ?>" class="form-control">
                 </div> 
                 
                 <div class="form-group">
                   <label>Harga jual</label>
-                  <input type="int" name="harga_jual" value="<?php echo $row['harga_jual'] ?>" class="form-control">
+                  <input required type="int" name="harga_jual" value="<?php echo $row['harga_jual'] ?>" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label>Tanggal masuk</label>
-                  <input type="date" name="tanggal_masuk" value="<?php echo $row['tanggal_masuk'] ?>" class="form-control">
+                  <input required type="date" name="tanggal_masuk" value="<?php echo $row['tanggal_masuk'] ?>" class="form-control">
                 </div>
-
-
                 
                 <button type="submit" class="btn btn-success">UPDATE</button>
                 <button type="reset" class="btn btn-warning">RESET</button>

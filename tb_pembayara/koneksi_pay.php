@@ -4,16 +4,16 @@
 include('../konek.php');
 
 //get data dari form
-$nama_ktgr           = $_POST['nama_ktgr'];
+$nama_pay           = $_POST['nama_pay'];
 
 //query insert data ke dalam database
-$query = "INSERT INTO tb_kategori (nama_ktgr) VALUES ('$nama_ktgr')";
+$query = "INSERT INTO tb_metode_pembayaran (nama_pay) VALUES ('$nama_pay')";
 
 //kondisi pengecekan apakah data berhasil dimasukkan atau tidak
 if($connection->query($query)) {
 
     //redirect ke halaman index.php 
-    header("location: index_ktgr.php");
+    header("location: index_pay.php");
 
 } else {
 

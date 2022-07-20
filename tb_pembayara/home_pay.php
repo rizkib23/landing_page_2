@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../css/bootstrap.css">
-    <title>Tambahkan Supplier</title>
+    <title>Tamabahkan Metode Pembayan</title>
   </head>
 
   <body>
@@ -15,30 +15,15 @@
         <div class="col-md-8 offset-md-2">
           <div class="card">
             <div class="card-header text-center">
-              TAMBAH SUPPLIER
+              TAMBAH METHOD PEMBAYARAN
 
             </div>
             <div class="card-body">
-              <form action="koneksi_spr.php" method="POST">
+              <form action="koneksi_pay.php" method="POST">
                 
                 <div class="form-group">
                   <label>Nama</label>
-                  <input required type="text" name="nama_supplier" class="form-control">
-                </div>
-
-                <div class="form-group">
-                  <label>No HP</label>
-                  <input required type="bigint" name="hp" class="form-control">
-                </div>
-
-                <div class="form-group">
-                  <label>Alamat</label>
-                  <input required type="text" name="alamat" class="form-control">
-                </div>
-
-                <div class="form-group">
-                  <label>No Rekening</label>
-                  <input required type="bigint" name="no_rekening" class="form-control">
+                  <input required type="text" name="nama_pay" class="form-control">
                 </div>
                 
                 <button type="submit" class="btn btn-success">SIMPAN</button>

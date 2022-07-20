@@ -23,6 +23,11 @@
             <li><a href="tb_kategori/index_ktgr.php">Kategori</a></li>
             <li><a href="tb_supplier/index_spr.php">Supplier</a></li>
             <li><a href="tb_brg/index_brg.php">Barang</a></li>
+            <li><a href="tb_perusahaan/index_pusat.php">Data Perusahaan</a></li>
+            <li><a href="tb_cabang/index_cb.php">Cabang</a></li>
+            <li><a href="tb_pembayara/index_pay.php">Metode Pembayan</a></li>
+            <li><a href="tb_member/index_mem.php">Member</a></li>
+            <li><a href="tb_kasir/index_ksr.php">Kasir</a></li>
           </ul>
         </li>
       </ul>
@@ -39,6 +44,8 @@
         </ul>
       </footer>
     </article>
+
+  </div>
 <!-- JAVASCRIPTS -->
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>

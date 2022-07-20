@@ -4,7 +4,7 @@
   
   $id = $_GET['id'];
   
-  $query = "SELECT * FROM tb_supplier WHERE id_supplier = $id LIMIT 1";
+  $query = "SELECT * FROM tb_perusahaan WHERE id_perusahaan = $id LIMIT 1";
 
   $result = mysqli_query($connection, $query);
 
@@ -18,7 +18,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../css/bootstrap.css">
-    <title>EDIT DATA SUPPLIER</title>
+    <title>EDIT DATA PERUSAHAAN</title>
   </head>
 
   <body>
@@ -28,20 +28,15 @@
         <div class="col-md-8 offset-md-2">
           <div class="card">
             <div class="card-header text-center">
-              EDIT DATA SUPPLIER
+              EDIT DATA PERUSAHAAN
             </div>
             <div class="card-body">
-              <form action="update_spr.php" method="POST">
+              <form action="update_pusat.php" method="POST">
 
                 <div class="form-group">
                   <label>Nama</label>
-                  <input required type="text" name="nama_supplier" value="<?php echo $row['nama_supplier'] ?>"  class="form-control">
-                  <input type="hidden" name="id_supplier" value="<?php echo $row['id_supplier'] ?>">
-                </div>
-
-                <div class="form-group">
-                  <label>No HP</label>
-                  <input required type="bigint" name="hp" value="<?php echo $row['hp'] ?>" class="form-control">
+                  <input required type="text" name="nama_pusat" value="<?php echo $row['nama_pusat'] ?>"  class="form-control">
+                  <input type="hidden" name="id_perusahaan" value="<?php echo $row['id_perusahaan'] ?>">
                 </div>
 
                 <div class="form-group">
@@ -50,8 +45,24 @@
                 </div>
 
                 <div class="form-group">
-                  <label>No Rekening</label>
-                  <input required type="bigint" name="no_rekening" value="<?php echo $row['no_rekening'] ?>" class="form-control">
+                  <label>No HP</label>
+                  <input required type="bigint" name="no_hp" value="<?php echo $row['no_hp'] ?>" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label>Email</label>
+                  <input required type="email" name="email" value="<?php echo $row['email'] ?>" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label>Tanggal Berdiri</label>
+                  <input required type="date" name="tanggal_berdiri" value="<?php echo $row['tanggal_berdiri'] ?>" class="form-control">
+                </div>
+
+
+                <div class="form-group">
+                  <label>NpWp</label>
+                  <input required type="text" name="npwp" value="<?php echo $row['npwp'] ?>" class="form-control">
                 </div>
 
                 <button type="submit" class="btn btn-success">UPDATE</button>

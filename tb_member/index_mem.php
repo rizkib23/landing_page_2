@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
     <!--  -->
-    <title>DATA BARANG</title>
+    <title>DATA MEMBER</title>
   </head>
 
   <body id="top">
-  <div class="padtop bc1">
-  <header id="header" class="hoc clear">
+<!-- nav bar -->
+<div class="padtop bc1">
+
+<header id="header" class="hoc clear">
     <div id="logo" class="fl_left"> 
       <h1>Indomaret</h1>
     </div>
@@ -33,7 +35,6 @@
             <li><a href="../tb_kasir/index_ksr.php">Kasir</a></li>
           </ul>
         </li>
-        </li>
       </ul>
     </nav>
   </header>
@@ -45,74 +46,61 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header text-center">
-              DATA BARANG
+              DATA MEMBER
             </div>
             <div class="card-body">
               <table class="table table-bordered" id="myTable">
                 <thead>
                   <tr>
                     <th scope="col">id</th>
-                    <th scope="col">id kategori</th>
-                    <th scope="col">id supplier</th>
                     <th scope="col">Nama</th>
-                    <th scope="col">Stok</th>
-                    <th scope="col">Harga modal</th>
-                    <th scope="col">Harga jual</th>
-                    <th scope="col">Tanggal masuk</th>
-                    
-          
+                    <th scope="col">No Hp</th>
+                    <th scope="col">Alamat</th>
+                    <th scope="col">Jenis Kelamin</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php 
                       include('../konek.php');
                       $no = 1;
-                      $query = mysqli_query($connection,"SELECT * FROM tb_barang 
-                      inner join tb_kategori on tb_kategori.id_kategori=tb_barang.id_kategori
-                      inner join tb_supplier on tb_supplier.id_supplier = tb_barang.id_supplier");
+                      $query = mysqli_query($connection,"SELECT * FROM tb_member");
                       while($row = mysqli_fetch_array($query)){
                   ?>
 
                   <tr>
-                      <td><?php echo $no++ ?></td>
-                      <td><?php echo $row['nama_ktgr'] ?></td>
-                      <td><?php echo $row['nama_supplier']?></td>
+                  <td><?php echo $no++ ?></td>
                       <td><?php echo $row['nama'] ?></td>
-                      <td><?php echo $row['stok'] ?></td>
-                      <td><?php echo $row['harga_modal'] ?></td>
-                      <td><?php echo $row['harga_jual'] ?></td>
-                      <td><?php echo $row['tanggal_masuk'] ?></td>
-
+                      <td><?php echo $row['no_hp'] ?></td>
+                      <td><?php echo $row['alamat'] ?></td>
+                      <td><?php echo $row['jenis_kelamin'] ?></td>
                       <td class="text-center">
-                        <a href="edit_brg.php?id=<?php echo $row['id_barang'] ?>" class="btn btn-sm btn-primary">EDIT</a>
-                        <a href="hapus_brg.php?id=<?php echo $row['id_barang'] ?>" class="btn btn-sm btn-danger">HAPUS</a>
+                        <a href="edit_mem.php?id=<?php echo $row['id_member'] ?>" class="btn btn-sm btn-primary">EDIT</a>
+                        <a href="hapus_mem.php?id=<?php echo $row['id_member'] ?>" class="btn btn-sm btn-danger">HAPUS</a>
                       </td>
                   </tr>
 
                 <?php } ?>
                 </tbody>
               </table>
-              <a href="home_brg.php" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
+              <a href="home_mem.php" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
             </div>
           </div>
       </div>
     </div>
     </div>
-  
 
-    <!-- JAVASCRIPTS -->
-<script src="../layout/scripts/jquery.min.js"></script>
-<script src="../layout/scripts/jquery.backtotop.js"></script>
-<script src="../layout/scripts/jquery.mobilemenu.js"></script>
-<script src="../js/bootstrap.js"></script>
-<script src="../js/jquery.min.js"></script>
-<script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-<script>
-  $(document).ready( function () {
-    $('#myTable').DataTable();
-  } );
-</script>
-<!-- end -->
-
+    <!-- js -->
+    <script src="../layout/scripts/jquery.min.js"></script>
+    <script src="../layout/scripts/jquery.backtotop.js"></script>
+    <script src="../layout/scripts/jquery.mobilemenu.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script>
+      $(document).ready( function () {
+          $('#myTable').DataTable();
+      } );
+    </script>
+    <!--  -->
   </body>
 </html>

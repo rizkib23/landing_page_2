@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../css/bootstrap.css">
-    <title>Tambahkan Supplier</title>
+    <title>Tambahkan Data Perusahaan</title>
   </head>
 
   <body>
@@ -15,20 +15,15 @@
         <div class="col-md-8 offset-md-2">
           <div class="card">
             <div class="card-header text-center">
-              TAMBAH SUPPLIER
+              TAMBAH DATA PERUSAHAAN
 
             </div>
             <div class="card-body">
-              <form action="koneksi_spr.php" method="POST">
+              <form action="koneksi_pusat.php" method="POST">
                 
-                <div class="form-group">
+              <div class="form-group">
                   <label>Nama</label>
-                  <input required type="text" name="nama_supplier" class="form-control">
-                </div>
-
-                <div class="form-group">
-                  <label>No HP</label>
-                  <input required type="bigint" name="hp" class="form-control">
+                  <input required type="text" name="nama_pusat"  class="form-control">
                 </div>
 
                 <div class="form-group">
@@ -37,10 +32,26 @@
                 </div>
 
                 <div class="form-group">
-                  <label>No Rekening</label>
-                  <input required type="bigint" name="no_rekening" class="form-control">
+                  <label>No HP</label>
+                  <input required type="bigint" name="no_hp" class="form-control">
                 </div>
-                
+
+                <div class="form-group">
+                  <label>Email</label>
+                  <input required type="email" name="email" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label>Tanggal Berdiri</label>
+                  <input required type="date" name="tanggal_berdiri" class="form-control">
+                </div>
+
+
+                <div class="form-group">
+                  <label>NpWp</label>
+                  <input required type="text" name="npwp" class="form-control">
+                </div>  
+
                 <button type="submit" class="btn btn-success">SIMPAN</button>
                 <button type="reset" class="btn btn-warning">RESET</button>
 

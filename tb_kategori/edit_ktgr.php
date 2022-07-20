@@ -18,7 +18,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../css/bootstrap.css">
-    <title>EDIT BARANG</title>
+    <title>EDIT KATEGORI</title>
   </head>
 
   <body>
@@ -27,15 +27,15 @@
       <div class="row">
         <div class="col-md-8 offset-md-2">
           <div class="card">
-            <div class="card-header">
-              EDIT BARANG
+            <div class="card-header text-center">
+              EDIT DATA KATEGORI
             </div>
             <div class="card-body">
               <form action="update_ktgr.php" method="POST">
 
                 <div class="form-group">
                   <label>Nama</label>
-                  <input type="text" name="nama" value="<?php echo $row['nama'] ?>"  class="form-control">
+                  <input required type="text" name="nama_ktgr" required value="<?php echo $row['nama_ktgr'] ?>"  class="form-control">
                   <input type="hidden" name="id_kategori" value="<?php echo $row['id_kategori'] ?>">
                 </div>
 
